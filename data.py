@@ -4,7 +4,7 @@ import plotly.express as px
 
 def load_data():
     df = pd.read_csv('covid_19_indonesia_time_series_all.csv')
-    df = df[df["Location"] != "Indonesia"] 
+    df = df[df["Location"] != "Indonesia"] # Filter out Indonesia
     return df
 
 def filter_data(df, year=None, location=None):
